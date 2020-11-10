@@ -9,8 +9,8 @@ import java.util.Random;
  */
 public class Contagios {
 
-    public static final String[] nombreCiudad = {"Estepona", "Marbella", "Mijas", "Fuengirola", "Benalmádena", "Torremolinos"};
-    public static final String[] nombreCentro = {"Norte", "Sur", "Este", "Oeste"};
+    public static final String[] NOMBRECIUDAD = {"Estepona", "Marbella", "Mijas", "Fuengirola", "Benalmádena", "Torremolinos"};
+    public static final String[] NOMBRECENTRO = {"Norte", "Sur", "Este", "Oeste"};
     public static int[] contagio;
     public static int ciudad, centro, rastreador;
 
@@ -34,7 +34,7 @@ public class Contagios {
 
         System.out.print("El Distrito de la Costa del Sol esta compuesto por " + ciudad + " ciudades: ");
         for (int i = 0; i < ciudad; i++) {
-            System.out.print(nombreCiudad[i] + " | ");
+            System.out.print(NOMBRECIUDAD[i] + " | ");
         }
         System.out.print("Cada una de ellas con " + centro + " centros de salud y " + rastreador + " rastreadores.");
         System.out.println("");
@@ -52,7 +52,7 @@ public class Contagios {
                 for (int k = 1; k <= rastreador; k++) {
                     do {
                         System.out.println(
-                                "Introduce contagios del rastreador " + k + " del centro de salud " + nombreCentro[j] + " en " + nombreCiudad[i] + ".");
+                                "Introduce contagios del rastreador " + k + " del centro de salud " + NOMBRECENTRO[j] + " en " + NOMBRECIUDAD[i] + ".");
 
                         cantidad = sc.nextInt();
                         if (cantidad < 0 || cantidad > 500) {
@@ -74,7 +74,7 @@ public class Contagios {
     public static void informeGeneral() {
         System.out.println("El total de contagiados por ciudad es el siguiente:");
         for (int i = 0; i < ciudad; i++) {
-            System.out.println("- " + nombreCiudad[i] + ": " + contagio[i] + " contagiados.");
+            System.out.println("- " + NOMBRECIUDAD[i] + ": " + contagio[i] + " contagiados.");
         }
         System.out.println("");
         System.out.println("-------------------------------------------------");
